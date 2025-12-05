@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Архив статей</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/article.css' %}">
+</head>
+<body class="archive">
+    <div class="header">
+        <img src="{% static 'img/logo.png' %}" alt="Логотип блога" />
+    </div>
+    <div class="archive">
+        {% if posts %}
+            {% for post in posts %}
+            <div class="one-post">
+                <h2 class="post-title">
+                    <a href="{% url 'get_article' article_id=post.id %}">{{ post.title }}</a>
+                </h2>
+                <div class="article-info">
+                    <div class="article-author">{{ post.author.username }}</div>
+                    <div class="article-created-date">{{ post.created_date }}</div>
+                </div>
+                <p class="article-text">{{ post.get_excerpt }}</p>
+            </div>
+            {% endfor %}
+        {% else %}
+            <div class="no-articles">
+                <p>Пока нет статей. Добавьте их через административную панель.</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

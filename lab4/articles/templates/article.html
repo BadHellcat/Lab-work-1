@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ post.title }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/article.css' %}">
+</head>
+<body class="article">
+    <div class="header">
+        <img src="{% static 'img/logo.png' %}" alt="Логотип блога" />
+    </div>
+    <div class="article">
+        <h1>{{ post.title }}</h1>
+
+        <div class="article-info">
+            <div class="article-author">Автор: {{ post.author.username }}</div>
+            <div class="article-created-date">Дата публикации: {{ post.created_date }}</div>
+        </div>
+
+        <div class="full-text">
+            {{ post.text|linebreaks }}
+        </div>
+
+        <a href="{% url 'archive' %}" class="back-link">← Все записи</a>
+    </div>
+</body>
+</html>

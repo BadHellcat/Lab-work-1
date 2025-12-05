@@ -1,0 +1,159 @@
+
+body {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.header img {
+    display: block;
+    width: 318px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.archive {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.post-title a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.post-title a:hover {
+    text-decoration: underline;
+    color: #f0f0f0;
+}
+
+.article-info {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.article-author {
+    width: 50%;
+    float: left;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.article-created-date {
+    text-align: right;
+    font-size: 14px;
+    color: #e0e0e0;
+}
+
+.article-text {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    border-left: 4px solid #16a085;
+}
+
+.article {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.article h1 {
+    font-size: 42px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 3px solid #16a085;
+    padding-bottom: 15px;
+}
+
+.article .full-text {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 8px;
+    line-height: 1.8;
+    font-size: 18px;
+    margin: 30px 0;
+    border: 2px solid #16a085;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #16a085;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.back-link:hover {
+    background-color: #138a72;
+    text-decoration: none;
+}
+
+.article .article-author {
+    width: 100%;
+    float: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #e0e0e0;
+    margin-bottom: 10px;
+}
+
+.article .article-created-date {
+    text-align: left;
+    font-size: 16px;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.no-articles {
+    text-align: center;
+    padding: 50px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin: 50px 0;
+}
+
+@media (max-width: 1000px) {
+    .archive, .article {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .post-title a {
+        font-size: 24px;
+    }
+
+    .article h1 {
+        font-size: 32px;
+    }
+}
+
+.one-post {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.one-post:last-child {
+    border-bottom: none;
+}
